@@ -3,8 +3,8 @@ var React = require('react');
 var Home = React.createClass({
   render: function () {
     return (
-      <div className='home'>
       <div>
+      <div className='home'>
         <h1> Enter a Movie Title </h1>
         <form onSubmit={this.props.onSubmitSearchString}>
             <div className='form-group' id='inputBox'>
