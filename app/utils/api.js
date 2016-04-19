@@ -1,6 +1,7 @@
 var axios = require('axios');
 
 var _baseURL = 'https://www.omdbapi.com/?s=';
+var _detailURL = 'https://www.omdbapi.com/?i=';
 var _trailURL = '&y=&plot=short&r=json';
 
 function getMovies(searchString) {
@@ -11,6 +12,14 @@ function getMovies(searchString) {
     });
 };
 
+function getDetails(id) {
+    return axios.get(_detailURL + id + _trailURL)
+        .then(function (movie) {
+      console.log(movie.data)
+      return movie.data;
+    });
+}
 module.exports = {
-  getMovies: getMovies
+  getMovies: getMovies,
+  getDetails: getDetails
 };
