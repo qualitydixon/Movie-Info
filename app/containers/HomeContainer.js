@@ -23,7 +23,6 @@ var HomeContainer = React.createClass({
         this.setState({
             searchString: ''
         });
-        console.log(searchString + " :)");
         this.context.router.push('/results/' + this.state.searchString)
     },
     render: function() {

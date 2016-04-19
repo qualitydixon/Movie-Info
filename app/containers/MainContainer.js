@@ -1,5 +1,5 @@
 var React = require('react');
-require('../stylesheets/main.css');
+require('../stylesheets/main.less');
 
 var MainContainer = React.createClass({
     render: function() {

@@ -1,0 +1,38 @@
+@background: #A9C5CC;
+@card_bg: #F4F4F4;
+
+@poster_width: 150px;
+@poster_height: 225px;
+
+body {
+    background: @background;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+.card {
+    background: @card_bg;
+    margin: 5px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    width: 20vw;
+    min-width: 400px;
+    display: flex;
+    align-items: center;
+}
+
+img {
+    width: @poster_width;
+    height: @poster_height;
+    margin: 5px;
+}

@@ -1,5 +1,4 @@
 var React = require('react');
-require('../stylesheets/main.css');
 
 var Home = React.createClass({
   render: function () {
