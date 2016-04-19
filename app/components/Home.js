@@ -15,8 +15,8 @@ var Home = React.createClass({
                     onChange={this.props.onUpdateSearchString} 
                     value={this.props.searchString} />
              </div>
-            <div className='form-group' id='getWeatherBtn'>
-                <button onClick={this.props.onSubmitSearchString} className="btn getBtn"> Get Movies </button>
+            <div className='form-group btnCon' id='getWeatherBtn'>
+                <button onClick={this.props.onSubmitSearchString} className="btn btn-lg btn-success getBtn"> Get Movies </button>
             </div>
         </form>
         </div>

@@ -7,18 +7,34 @@
 @poster_height: 225px;
 @main_font: Roboto;
 
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
 body {
     background: @background;
     font-family: @main_font;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+       
 }
 
 .home {
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100vw;
-    height: 100vh;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    padding: 20px;
+    background: @card_bg;
+    width: auto;
+    height: auto;
+    animation-name: fadeIn;
+    animation-duration: 1s; 
 }
 
 .list {
@@ -31,15 +47,38 @@ body {
     background: @card_bg;
     font-weight: bold;
     margin: 5px;
+    border-radius: 5px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     width: 20vw;
     min-width: 400px;
     display: flex;
     align-items: center;
+    animation-name: fadeIn;
+    animation-duration: 2s; 
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    opacity: 0;
+}
+
+.card:hover {
+    cursor: pointer;
 }
 
 .form-control {
     width: 20vw;
+}
+
+.form-group {  
+    text-align: center;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.getBtn {
+    width: 300px;
 }
 
 img {

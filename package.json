@@ -18,6 +18,7 @@
     "babel-core": "^6.7.2",
     "less": "^2.6.1",
     "react": "^0.14.7",
+    "react-addons-css-transition-group": "^15.0.1",
     "react-dom": "^0.14.7",
     "react-router": "^2.0.0"
   },

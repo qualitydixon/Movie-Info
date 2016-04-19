@@ -1,6 +1,7 @@
 var React = require('react');
 var Results = require('../components/Results');
 var getMovies = require('../utils/api').getMovies;
+var getDetails = require('../utils/api').getDetails;
 
 var ResultsContainer = React.createClass({
     getInitialState: function () {
@@ -26,7 +27,8 @@ var ResultsContainer = React.createClass({
             <Results 
                 isLoading={this.state.isLoading} 
                 searchString={this.props.routeParams.searchString}
-                movieData={this.state.movieData} />
+                movieData={this.state.movieData} 
+                getDetails={getDetails} />
         )
     }
     
