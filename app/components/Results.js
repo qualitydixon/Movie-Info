@@ -26,7 +26,7 @@ function ResultsUI (props) {
 
 function Results (props) {
     return props.isLoading === true 
-        ? <div> Loading </div>
+        ? <div className='loading'> Loading </div>
         : <ResultsUI movieData={props.movieData} getDetails={props.getDetails} />
 };
 
