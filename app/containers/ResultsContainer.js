@@ -7,7 +7,9 @@ var ResultsContainer = React.createClass({
     getInitialState: function () {
         return {
             isLoading: true,
-            movieData: {}
+            movieData: {},
+            modalOpen: false,
+            modalData: {}
         }
     },
     componentDidMount: function () {
@@ -22,13 +24,29 @@ var ResultsContainer = React.createClass({
         }.bind(this));
         
     },
+    makeDetailsRequest: function (movie) {
+        getDetails(movie).then(function (data) {
+            this.setState({
+                modalOpen:true,
+                modalData: data
+            });
+        }.bind(this))
+    },
+    closeModal: function () {
+    this.setState({
+        modalOpen: false
+    });
+    },
     render: function () {
         return (
             <Results 
                 isLoading={this.state.isLoading} 
                 searchString={this.props.routeParams.searchString}
                 movieData={this.state.movieData} 
-                getDetails={getDetails} />
+                makeDetailsRequest={this.makeDetailsRequest}
+                modalOpen={this.state.modalOpen}
+                closeModal={this.closeModal}
+                modalData={this.state.modalData} />
         )
     }
     

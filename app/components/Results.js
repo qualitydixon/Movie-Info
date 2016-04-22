@@ -1,10 +1,22 @@
 var React = require('react');
 var PropTypes = React.PropTypes;
+var Modal = require('react-modal');
+
+const customStyles = {
+  content : {
+    top                   : '50%',
+    left                  : '50%',
+    right                 : 'auto',
+    bottom                : 'auto',
+    marginRight           : '-50%',
+    transform             : 'translate(-50%, -50%)'
+  }
+};
 
 function ListItem (props) {
       return (
-          <li style={{animationDelay: (2+(props.idx*10)/100) + 's'}} className="card" onClick={props.getDetails}>
-            <img src={props.movie.Poster}/>
+          <li style={{animationDelay: (2+(props.idx*10)/100) + 's'}} className="card" onClick={props.makeDetailsRequest}>
+            <img src={props.movie.Poster} className='listPoster' />
             <div className="info">
             <div> {props.movie.Title} </div>
             </div> 
@@ -12,22 +24,45 @@ function ListItem (props) {
       )
 }
 
+function ModalUI (props) {
+    return (
+        <div className="modalContainer">
+            <img src={props.modalData.Poster} className='modalPoster' />
+            <div className='modalInfo'>
+            <h2>{props.modalData.Title}</h2>
+            <div>{props.modalData.Plot}</div>
+            </div>
+        </div>
+    )
+}
+
 function ResultsUI (props) {
     return (
-        
-        <ul className="list">
-            {props.movieData.Search.map(function (movie, idx) {
-                return <ListItem key={movie.imdbID} idx={idx} movie={movie} getDetails={props.getDetails.bind(null, movie.imdbID)} />
-            })}
-         </ul>
-         
+        <div>
+            <ul className="list">
+                {props.movieData.Search.map(function (movie, idx) {
+                    return <ListItem key={movie.imdbID} idx={idx} movie={movie} makeDetailsRequest={props.makeDetailsRequest.bind(null, movie.imdbID)} />
+                })}
+            </ul>
+            <Modal
+                isOpen={props.modalOpen}
+                style={customStyles} 
+                onRequestClose={props.closeModal} >
+                <ModalUI modalData={props.modalData} />
+            </Modal>
+        </div>
     )
 };
 
 function Results (props) {
     return props.isLoading === true 
-        ? <div className='loading'> Loading </div>
-        : <ResultsUI movieData={props.movieData} getDetails={props.getDetails} />
+    ? <div className='loading'> Loading </div>
+    : <ResultsUI 
+        movieData={props.movieData} 
+        makeDetailsRequest={props.makeDetailsRequest} 
+        modalOpen={props.modalOpen}
+        closeModal={props.closeModal} 
+        modalData={props.modalData} />
 };
 
 module.exports = Results;
