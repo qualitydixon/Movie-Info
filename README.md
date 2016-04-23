@@ -9,5 +9,5 @@ Get information about your favorite movies using the OMDb API.
 
 ## Installation
 
-## Screens
+Fork and clone this repo.
 
