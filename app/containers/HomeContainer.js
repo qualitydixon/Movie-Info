@@ -12,7 +12,6 @@ var HomeContainer = React.createClass({
         }
     },
     handleUpdateSearchString: function(e) {
-      //console.log(e.target.value);
       this.setState({
           searchString: e.target.value
       });  

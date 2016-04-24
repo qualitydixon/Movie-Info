@@ -53,13 +53,14 @@ function ResultsUI (props) {
     return (
         <div>
             <ul className="list">
-                {props.movieData.Search.map(function (movie, idx) {
+                {props.movieData.map(function (movie, idx) {
                     return <ListItem key={movie.imdbID} idx={idx} movie={movie} makeDetailsRequest={props.makeDetailsRequest.bind(null, movie.imdbID)} />
                 })}
             </ul>
             <Modal
-                isOpen={props.modalOpen}
-                style={customStyles} 
+                isOpen={props.modalOpen} 
+                style={customStyles}
+                closeTimeoutMS={150}
                 onRequestClose={props.closeModal} >
                 <ModalUI modalData={props.modalData} />
             </Modal>
