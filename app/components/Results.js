@@ -13,6 +13,14 @@ const customStyles = {
   }
 };
 
+const bd = {
+    fontWeight: 'bold'
+}
+
+const addSpace = {
+    marginTop: '10px'
+}
+
 function ListItem (props) {
       return (
           <li style={{animationDelay: (2+(props.idx*10)/100) + 's'}} className="card" onClick={props.makeDetailsRequest}>
@@ -29,8 +37,13 @@ function ModalUI (props) {
         <div className="modalContainer">
             <img src={props.modalData.Poster} className='modalPoster' />
             <div className='modalInfo'>
-            <h2>{props.modalData.Title}</h2>
-            <div>{props.modalData.Plot}</div>
+                <h2>{props.modalData.Title}</h2>
+                <div>{props.modalData.Plot}</div>
+                <ul style={addSpace}>
+                    <li><span style={bd}>Starring:</span> {props.modalData.Actors}</li>
+                    <li><span style={bd}>Release Date:</span> {props.modalData.Released}</li>
+                    <li><span style={bd}>Genre:</span> {props.modalData.Genre}</li>
+                </ul>
             </div>
         </div>
     )
