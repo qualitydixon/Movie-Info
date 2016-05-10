@@ -1,7 +1,7 @@
-var React = require('react');
-var Results = require('../components/Results');
-var getMovies = require('../utils/api').getMovies;
-var getDetails = require('../utils/api').getDetails;
+import React, { PropTypes } from 'react'
+var Results = require('../components/Results')
+var getMovies = require('../utils/api').getMovies
+var getDetails = require('../utils/api').getDetails
 
 var ResultsContainer = React.createClass({
     getInitialState: function () {
@@ -20,8 +20,8 @@ var ResultsContainer = React.createClass({
             this.setState({
                 movieData: data,
                 isLoading: false,
-            });
-        }.bind(this));
+            })
+        }.bind(this))
         
     },
     makeDetailsRequest: function (movie) {
@@ -29,13 +29,13 @@ var ResultsContainer = React.createClass({
             this.setState({
                 modalOpen:true,
                 modalData: data
-            });
+            })
         }.bind(this))
     },
     closeModal: function () {
     this.setState({
         modalOpen: false
-    });
+    })
     },
     render: function () {
         return (
@@ -48,8 +48,7 @@ var ResultsContainer = React.createClass({
                 closeModal={this.closeModal}
                 modalData={this.state.modalData} />
         )
-    }
-    
-});
+    } 
+})
 
-module.exports = ResultsContainer;
+module.exports = ResultsContainer

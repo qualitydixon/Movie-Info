@@ -13,3 +13,8 @@ Get information about your favorite movies using the OMDb API.
 
 Fork and clone this repo.
 
+## Todo
+
+- Add navbar.
+- Add a default picture for when poster is not recieved.
+
