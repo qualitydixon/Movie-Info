@@ -64,14 +64,19 @@ function ResultsUI(props) {
   return (
     <div>
       <ul className='list'>
-        {props.movieData.map((movie, idx) => <ListItem key={movie.imdbID} idx={idx} movie={movie} makeDetailsRequest={props.makeDetailsRequest.bind(null, movie.imdbID)} />
+        {props.movieData.map((movie, idx) =>
+          <ListItem
+            key={movie.imdbID} idx={idx} movie={movie}
+            makeDetailsRequest={props.makeDetailsRequest.bind(null, movie.imdbID)} 
+          />
         )}
       </ul>
       <Modal
         isOpen={props.modalOpen}
         style={customStyles}
         closeTimeoutMS={150}
-        onRequestClose={props.closeModal} >
+        onRequestClose={props.closeModal}
+      >
         <ModalUI modalData={props.modalData} />
       </Modal>
     </div>
@@ -94,7 +99,8 @@ function Results(props) {
       makeDetailsRequest={props.makeDetailsRequest}
       modalOpen={props.modalOpen}
       closeModal={props.closeModal}
-      modalData={props.modalData} />
+      modalData={props.modalData}
+    />
 }
 
 Results.propTypes = {
@@ -102,7 +108,7 @@ Results.propTypes = {
   modalOpen: bool.isRequired,
   closeModal: func.isRequired,
   makeDetailsRequest: func.isRequired,
-  movieData: array.isRequired,
+  movieData: PropTypes.any.isRequired,
   modalData: object.isRequired,
 }
 

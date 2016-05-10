@@ -1,12 +1,8 @@
 import React from 'react'
-var ReactRouter = require('react-router')
-var Router = ReactRouter.Router
-var Route = ReactRouter.Route
-var hashHistory = ReactRouter.hashHistory
-var IndexRoute = ReactRouter.IndexRoute
-var MainContainer = require('../containers/MainContainer')
-var HomeContainer = require('../containers/HomeContainer')
-var ResultsContainer = require('../containers/ResultsContainer')
+import { Router, Route, hashHistory, IndexRoute } from 'react-router'
+import MainContainer from '../containers/MainContainer'
+import HomeContainer from '../containers/HomeContainer'
+import ResultsContainer from '../containers/ResultsContainer'
 
 const routes = (
   <Router history={hashHistory}>

@@ -27,7 +27,8 @@ const HomeContainer = React.createClass({
       <Home
         onSubmitSearchString={this.handleSubmitSearchString}
         onUpdateSearchString={this.handleUpdateSearchString}
-        searchString={this.state.searchString} />
+        searchString={this.state.searchString}
+      />
     )
   },
 })

@@ -17,4 +17,5 @@ Fork and clone this repo.
 
 - Add navbar.
 - Add a default picture for when poster is not recieved.
+- Include a loading animation instead of static "Loading" text.
 
