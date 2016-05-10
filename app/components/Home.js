@@ -12,7 +12,7 @@ function Home(props) {
               placeholder='Star Wars'
               type='text'
               onChange={props.onUpdateSearchString}
-              value={props.searchString} 
+              value={props.searchString}
             />
           </div>
           <div className='form-group btnCon' id='getWeatherBtn'>
