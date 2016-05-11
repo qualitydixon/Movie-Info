@@ -1,13 +1,9 @@
 # Movie Info
 Get information about your favorite movies using the OMDb API.
 
-![alt text](https://raw.githubusercontent.com/qualitydixon/Movie-Info/master/app/screenshots/screen1.png "Home Screen")
+![alt text](http://g.recordit.co/l2KyKlTR8q.gif "Star Wars")
 
-![alt text](https://raw.githubusercontent.com/qualitydixon/Movie-Info/master/app/screenshots/screen2.png "Results")
-
-![alt text](https://raw.githubusercontent.com/qualitydixon/Movie-Info/master/app/screenshots/screen3.png "Details")
-
-## Live Demo
+LIVE DEMO (coming soon)
 
 ## Installation
 
@@ -15,7 +11,7 @@ Fork and clone this repo.
 
 ## Todo
 
-- Add navbar.
+- Add navbar with home button.
 - Add a default picture for when poster is not recieved.
 - Include a loading animation instead of static "Loading" text.
 
