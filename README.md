@@ -6,7 +6,7 @@ LIVE DEMO (coming soon)
 
 ## Built with...
 
-This project was made with React, React-Router, Webpack, Less, Axios, and Eslint (airbnb).
+This project was made with React, React-Router, React Modal, Webpack, Less, Axios, and Eslint (airbnb).
 
 ## Installation
 

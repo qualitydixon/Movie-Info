@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react'
 import Modal from 'react-modal'
+import Navigation from '../components/Navigation'
 
 const { object, number, func, bool, array } = PropTypes
 
@@ -23,8 +24,9 @@ const addSpace = {
 }
 
 function ListItem(props) {
+  const animationDelay = `${2 + (props.idx * 10) / 100}s`
   return (
-    <li style={{ animationDelay: `${2 + (props.idx * 10) / 100}s` }} className='card' onClick={props.makeDetailsRequest}>
+    <li style={{ animationDelay }} className='card' onClick={props.makeDetailsRequest}>
       <img alt={'Poster'} src={props.movie.Poster} className='listPoster' />
       <div className='info'>
         <p> {props.movie.Title} </p>
@@ -60,9 +62,12 @@ ModalUI.propTypes = {
   modalData: object.isRequired,
 }
 
-function ResultsUI(props) {
-  return (
-    <div>
+
+function Results(props) {
+  return props.isLoading === true
+    ? <div className='loading'> {'Loading'} </div>
+    : <div>
+      <Navigation />
       <ul className='list'>
         {props.movieData.map((movie, idx) =>
           <ListItem
@@ -80,27 +85,6 @@ function ResultsUI(props) {
         <ModalUI modalData={props.modalData} />
       </Modal>
     </div>
-  )
-}
-
-ResultsUI.propTypes = {
-  modalOpen: bool.isRequired,
-  closeModal: func.isRequired,
-  modalData: object.isRequired,
-  movieData: array.isRequired,
-  makeDetailsRequest: func.isRequired,
-}
-
-function Results(props) {
-  return props.isLoading === true
-    ? <div className='loading'> {'Loading'} </div>
-    : <ResultsUI
-      movieData={props.movieData}
-      makeDetailsRequest={props.makeDetailsRequest}
-      modalOpen={props.modalOpen}
-      closeModal={props.closeModal}
-      modalData={props.modalData}
-    />
 }
 
 Results.propTypes = {

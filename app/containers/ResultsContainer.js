@@ -40,15 +40,17 @@ const ResultsContainer = React.createClass({
   },
   render() {
     return (
-      <Results
-        isLoading={this.state.isLoading}
-        searchString={this.props.routeParams.searchString}
-        movieData={this.state.movieData}
-        makeDetailsRequest={this.makeDetailsRequest}
-        modalOpen={this.state.modalOpen}
-        closeModal={this.closeModal}
-        modalData={this.state.modalData}
-      />
+      <div>
+        <Results
+          isLoading={this.state.isLoading}
+          searchString={this.props.routeParams.searchString}
+          movieData={this.state.movieData}
+          makeDetailsRequest={this.makeDetailsRequest}
+          modalOpen={this.state.modalOpen}
+          closeModal={this.closeModal}
+          modalData={this.state.modalData}
+        />
+      </div>
     )
   },
 })
