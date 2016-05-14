@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react'
 import Modal from 'react-modal'
 import Navigation from '../components/Navigation'
 
-const { object, number, func, bool, array } = PropTypes
+const { object, number, func, bool } = PropTypes
 
 const customStyles = {
   content: {
