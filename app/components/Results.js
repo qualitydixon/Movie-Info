@@ -1,6 +1,5 @@
 import React, { PropTypes } from 'react'
 import Modal from 'react-modal'
-import Navigation from '../components/Navigation'
 
 const { object, number, func, bool } = PropTypes
 
@@ -67,7 +66,6 @@ function Results(props) {
   return props.isLoading === true
     ? <div className='loading'> {'Loading'} </div>
     : <div>
-      <Navigation />
       <ul className='list'>
         {props.movieData.map((movie, idx) =>
           <ListItem

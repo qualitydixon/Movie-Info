@@ -8,36 +8,41 @@
 @main_font: Roboto;
 
 @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
 
 body {
-    background: @background;
-    font-family: @main_font;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background: @background;
+  font-family: @main_font;
+  display: flex;
+  align-items: center;
+  justify-content: center;
        
 }
 
+h2 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
 .title {
-    height: 50px;
+  height: 50px;
 }
 
 .navContainer {
+  color: #FFFFFF;
+  width: 98vw;
   display: flex;
-  width: 100%;
-  max-width: 1100px;
-  margin: 0px 10px;
-  width: 100%;
-  font-size: 28px;
-  font-family: @main_font;
+  align-items: center;
+  height: auto;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
 
 .navContainer ul {
   display: flex;
-  padding: 0;
+  margin-right: 5px;
 }
 
 .navContainer li {
@@ -47,92 +52,111 @@ body {
 
 .link {
   text-decoration: none;
+  font-size: 20px;
+  align-self: center;
+  color: white;
 }
 
 .link:hover {
   text-decoration: none;  
 }
 
-.home {
-    border-radius: 20px;
+.icon {
+  font-size: 28px;
+  color: #FFFFFF;
+  margin-top: 5px;
+}
+
+.title {
+  margin-left: 10px;
+}
+
+.homeContainer {
+    width: 100vw;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20vh;
-    height: 100vh;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-    padding: 20px;
-    background: @card_bg;
-    width: auto;
-    height: auto;
-    animation-name: fadeIn;
-    animation-duration: 1s; 
+    justify-content: center;
+}
+
+.home {
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20vh;
+  height: 100vh;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  padding: 20px;
+  background: @card_bg;
+  width: 500px;
+  height: auto;
+  animation-name: fadeIn;
+  animation-duration: 1s; 
 }
 
 .list {
-    display: flex;
-    flex-wrap: wrap;
-    list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
 }
 
 .card {
-    background: @card_bg;
-    font-weight: bold;
-    margin: 5px;
-    border-radius: 5px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-    width: 20vw;
-    min-width: 400px;
-    display: flex;
-    align-items: center;
-    animation-name: fadeIn;
-    animation-duration: 2s; 
-    animation-fill-mode: forwards;
-    animation-timing-function: linear;
-    opacity: 0;
+  background: @card_bg;
+  font-weight: bold;
+  margin: 5px;
+  border-radius: 5px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  width: 20vw;
+  min-width: 400px;
+  display: flex;
+  align-items: center;
+  animation-name: fadeIn;
+  animation-duration: 2s; 
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  opacity: 0;
 }
 
 .modalContainer {
-    display: flex;
+  display: flex;
 }
 
 .modalPoster {
-    margin: 10px;
+  margin: 10px;
 }
 
 .modalInfo {
-    width: 20vw;
+  width: 20vw;
 }
 
 .loading {
-    font-size: 15vh;
-    color: #F4F4F4;
-    margin-top: 20vh;
+  font-size: 15vh;
+  color: #F4F4F4;
+  margin-top: 20vh;
 }
 
 .card:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .form-control {
-    width: 20vw;
+  width: 20vw;
 }
 
 .form-group {  
-    text-align: center;
+  text-align: center;
 }
 
 .info {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .getBtn {
-    width: 300px;
+  width: 300px;
 }
 
 .listPoster {
-    width: @poster_width;
-    height: @poster_height;
-    margin: 5px;
+  width: @poster_width;
+  height: @poster_height;
+  margin: 5px;
 }

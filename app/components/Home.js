@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react'
 
 function Home(props) {
   return (
-    <div>
+    <div className='homeContainer'>
       <div className='home'>
         <h1> {'Enter a Movie Title'} </h1>
         <form onSubmit={props.onSubmitSearchString}>
