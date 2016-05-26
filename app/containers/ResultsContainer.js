@@ -31,6 +31,7 @@ const ResultsContainer = React.createClass({
         modalOpen: true,
         modalData: data,
       })
+      console.log(data)
     })
   },
   closeModal() {

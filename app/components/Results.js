@@ -26,7 +26,7 @@ function ListItem(props) {
   const animationDelay = `${2 + (props.idx * 10) / 100}s`
   return (
     <li style={{ animationDelay }} className='card' onClick={props.makeDetailsRequest}>
-      <img alt={'Poster'} src={props.movie.Poster} className='listPoster' />
+      <img alt={'Poster'} src={props.movie.Poster.replace('http', 'https')} className='listPoster' />
       <div className='info'>
         <p> {props.movie.Title} </p>
       </div>
