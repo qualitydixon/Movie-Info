@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
-    "prod": "webpack -p"
+    "prod": "webpack -p",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [
     "react",
