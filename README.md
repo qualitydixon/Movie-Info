@@ -12,9 +12,14 @@ This project was made with React, React-Router, React Modal, Webpack, Less, Axio
 
 Fork and clone this repo, run `npm install`, then `npm run start`. You will see the project at `http://localhost:8080/` in your browser.
 
+## Known Issues
+
+- Cannot retrieve posters in Live Demo.
+
 ## Todo
 
-- Add navbar with home button.
+- ~~Add navbar with home button.~~
+- ~~Convert createClass to ES6 classes.~~
 - Add a default picture for when poster is not recieved.
 - Include a loading animation instead of static "Loading" text.
 

@@ -70,7 +70,7 @@ function Results(props) {
         {props.movieData.map((movie, idx) =>
           <ListItem
             key={movie.imdbID} idx={idx} movie={movie}
-            makeDetailsRequest={props.makeDetailsRequest.bind(null, movie.imdbID)}
+            makeDetailsRequest={() => props.makeDetailsRequest(movie.imdbID)}
           />
         )}
       </ul>
